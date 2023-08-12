@@ -1,0 +1,29 @@
+import java.util.Scanner;
+public class primechecker {
+    public static void main(String[] args) {
+        Scanner S = new Scanner(System.in);
+        System.out.print("Enter any number :");
+        int number = S.nextInt();
+        check.checkprime(number);
+    }
+}
+class check{
+   static void checkprime(int x){
+        int flag =0;
+        if(x==1){
+            flag=1;
+        }
+        for(int i=2;i<x;i++){
+            if(x%i==0){
+                 flag=1;
+                break;
+            }
+            else  flag=0;
+        }
+        if(flag==1){
+            System.out.println("The number "+x+" is NOT prime");
+        }else System.out.println("The number "+x+" is a prime Number");
+
+    }
+
+}
