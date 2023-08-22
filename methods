@@ -1,0 +1,27 @@
+package com.company;
+import java.util.Scanner;
+public class student {
+    int uid;
+    String name;
+    static String college = "Chandigarh university";
+    student(int uid,String name){
+        this.uid = uid;
+        this.name = name;
+    }
+    void show(){
+        System.out.println("uid of "+ name +" is "+uid+"\nHe is studying in "+college);
+    }
+    public static void main(String[] args) {
+        Scanner S = new Scanner(System.in);
+
+
+        System.out.println("Enter uid :");
+        int uid = S.nextInt();
+        System.out.println("Enter name :");
+        String name = S.next();
+         student st1 = new student(uid,name);
+         st1.show();
+        student st2 = new student(uid,name);
+        st2.show();
+    }
+    }
